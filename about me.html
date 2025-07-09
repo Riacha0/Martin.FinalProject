@@ -1,0 +1,123 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me - Martin Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- ✅ JavaScript for Logout Confirmation -->
+  <script>
+    function confirmLogout(event) {
+      event.preventDefault();
+      const confirmLog = confirm("Are you sure you want to logout?");
+      if (confirmLog) {
+        window.location.href = "login.html";
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="logo">Migs<span>Portfolio</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about me.html" class="active">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="login.html" onclick="confirmLogout(event)">Logout</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="about-container">
+      <h1>About Me</h1>
+      <p>
+        Hi I'm migs thank you for visitng my website
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 by riacha</p>
+  </footer>
+
+  <!-- Internal CSS -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f7f7f7;
+      color: #222;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    /* Header/Nav */
+    header {
+      background-color: #00b14f;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+    .logo span {
+      color: #ffffff;
+    }
+    nav a {
+      margin-left: 20px;
+      font-weight: 500;
+      transition: opacity 0.3s ease;
+    }
+    nav a:hover, nav a.active {
+      opacity: 0.8;
+    }
+
+    /* About Section */
+    .about-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .about-container {
+      background-color: white;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .about-container h1 {
+      color: #00b14f;
+      margin-bottom: 20px;
+    }
+    .about-container p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #00b14f;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+    }
+  </style>
+</body>
+</html>
